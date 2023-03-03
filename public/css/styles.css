@@ -1,0 +1,207 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0eeed;
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.7em;
+}
+
+/* Lists buttons */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.list-btn {
+  color: #ffffff;
+  padding: 10px;
+  margin: 0.7em 0em;
+  background-color: #a683e3;
+  border-color: transparent;
+  font-size: 1rem;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 5px;
+  min-width: 200px;
+  box-shadow: 5px 5px 15px -5px rgba(102, 93, 93, 0.3);
+}
+
+/* List box */
+.box {
+  width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(102, 93, 93, 0.3);
+}
+
+/* Title */
+#heading {
+  background-color: #a683e3;
+  text-align: center;
+  margin: 70px auto 20px;
+}
+
+.icon {
+  margin-right: 0.2em;
+  font-weight: 700;
+}
+
+/* List */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0em 1em;
+}
+
+/* Item in the list */
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+/* Input form */
+form {
+  text-align: center;
+  margin-left: 20px;
+}
+
+/* Check button */
+.check-btn {
+  font-size: 1.5rem;
+  margin: 20px;
+  cursor: pointer;
+  color: #a683e3;
+}
+
+.check-btn:hover {
+  color: #856ab6;
+}
+
+.listitem-checked {
+  text-decoration: line-through;
+  text-decoration-color: #a683e3;
+  color: #83868a;
+}
+
+.item-checked {
+  background-color: #e1d3f97c;
+}
+
+.list-btn:hover {
+  background-color: #856ab6;
+  box-shadow: 5px 5px 20px -5px rgba(255, 255, 255, 0.3);
+}
+
+/* Input text */
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #a683e3;
+}
+
+::placeholder {
+  font-size: 1.2rem;
+  color: grey;
+  opacity: 0.6;
+}
+
+/* Add button */
+.add-btn {
+  color: #a683e3;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  border-width: 0;
+}
+
+.add-btn:hover {
+  color: #856ab6;
+}
+
+/* Back button */
+.back-btn {
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #a683e3;
+  box-shadow: 5px 5px 15px -5px rgba(102, 93, 93, 0.3);
+}
+
+.back-btn:hover {
+  background-color: #856ab6;
+  box-shadow: 5px 5px 20px -5px rgba(255, 255, 255, 0.3);
+}
+
+.fa-arrow-left {
+  margin-right: 0.2em;
+}
+
+/* Footer */
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+
+  padding: 5em;
+}
+
+a {
+  text-decoration: none;
+  color: #a683e3;
+}
+
+a:hover {
+  color: #856ab6;
+}
+
+.github-link {
+  margin-top: 0.5em;
+}
