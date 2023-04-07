@@ -13,7 +13,7 @@ const app = express();
 //////////////////////////////////MongoDB//////////////////////////////////
 
 //Connecting to Mongoose database
-mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
+mongoose.connect(process.env.CONNECT_LINK);
 
 //Item Schema
 const itemSchema = new mongoose.Schema({
