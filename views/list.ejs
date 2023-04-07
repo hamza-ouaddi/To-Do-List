@@ -1,33 +1,44 @@
 <%- include ("header") -%>
 
-    <div class="box" id="heading">
-      
-      <h1><%= listTitle%></h1>
-    </div>
-    <div class="box">
-      
-        <% for(let i = 0; i<newListItems.length; i++){ %> 
-          <div class="item list-item">
-            <!-- <input type="checkbox" class="p-check"> -->
-            
-            <i class="fa-regular check-btn fa-circle" ></i>
-            <p class="paragraph" ><%= newListItems[i] %></p>
-            
-          </div>
-          <% } %>
-      
+<div class="box" id="heading">
+  <h1><%= listTitle%></h1>
+</div>
+<div class="box">
+  <% newListItems.forEach(function(item){ %>
+  <div class="list-item">
+    <form action="/delete" method="post">
+      <input
+        type="checkbox"
+        class="checkbox-btn"
+        name="checkbox"
+        value="<%=item._id%>"
+        onChange="this.form.submit()"
+      />
 
-      <form action="/" class="item" method="post">
-        <input type="text" name="newItem" id="" placeholder="New Item" autocomplete="off"/>
-        <button type="submit" name="list" value="<%= listTitle%>" class="add-btn"><i class="fa-solid fa-circle-plus"></i></button>
-      </form>
+      <input type="hidden" name="listTitle" value="<%= listTitle %>" />
+      <i class="fa-regular check-btn fa-circle"></i>
+      <p class="paragraph"><%= item.description %></p>
+    </form>
+  </div>
+  <% }) %>
 
-    </div>
+  <form action="/" class="item" method="post">
+    <input
+      type="text"
+      name="newItem"
+      id=""
+      placeholder="New Item"
+      autocomplete="off"
+      required
+    />
+    <button type="submit" name="list" value="<%= listTitle%>" class="add-btn">
+      <i class="fa-solid fa-circle-plus"></i>
+    </button>
+  </form>
+</div>
 
-    <div>
-      <button class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</button>  
-    </div>
-    
-<%- include ("footer") -%>    
-    
+<div>
+  <button class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back</button>
+</div>
 
+<%- include ("footer") -%>

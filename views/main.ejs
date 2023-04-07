@@ -1,25 +1,41 @@
 <%- include ("header") -%>
 <div class="box" id="heading">
-  <h1><i class="fa-solid fa-check-double icon"></i><%= listTitle%></h1>
+  <h1><i class="fa-solid fa-check-double icon"></i>To Do List</h1>
 </div>
 
 <div class="buttons">
   <!-- <form class="buttons" action="/" method="post"> -->
   <input
     type="submit"
-    name="tobuy"
+    name="today"
     id="buy-btn"
     class="list-btn"
-    value="To Buy List"
+    value="Today List"
   />
+
+  <!-- Customize a list -->
   <input
     type="submit"
-    name="towork"
-    id="work-btn"
+    name="customize"
+    id="customize-btn"
     class="list-btn"
-    value="To Work List"
+    value="Customize a List"
   />
+
   <!-- </form> -->
+</div>
+<div class="customize-list" id="customize-part">
+  <form action="/create" method="post">
+    <input
+      type="text"
+      name="newListTitle"
+      id="customize-input"
+      placeholder="The title of the list"
+      required
+      autocomplete="off"
+    />
+    <button type="submit" name="create-btn" class="create-btn">Create</button>
+  </form>
 </div>
 
 <%- include ("footer") -%>

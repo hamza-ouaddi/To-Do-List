@@ -44,6 +44,54 @@ h1 {
   box-shadow: 5px 5px 15px -5px rgba(102, 93, 93, 0.3);
 }
 
+/*-Customize Part-*/
+
+.customize-list {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+#customize-input {
+  background: white !important;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+  height: auto;
+}
+
+#customize-input::placeholder {
+  font-size: 1rem;
+}
+
+.customize-list button {
+  cursor: pointer;
+}
+
+.create-btn {
+  margin-top: 0.5em;
+  color: #24292e;
+  padding: 5px;
+  background-color: #fafbfc;
+  border-color: transparent;
+  font-size: 0.8.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  min-width: 200px;
+}
+.create-btn:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
 /* List box */
 .box {
   width: 400px;
@@ -70,6 +118,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   padding: 0em 1em;
+  align-items: center;
 }
 
 /* Item in the list */
@@ -94,6 +143,9 @@ p {
 
 /* Input form */
 form {
+  display: contents;
+}
+form.item {
   text-align: center;
   margin-left: 20px;
 }
@@ -110,6 +162,64 @@ form {
   color: #856ab6;
 }
 
+/*-----------------------------*/
+
+.checkbox-btn {
+  display: none;
+}
+.show {
+  display: flex;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  appearance: none;
+  background-color: transparent;
+  color: #acacac;
+  margin: -50px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #acacac;
+  border-radius: 1em;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="checkbox"]::before {
+  content: "✕";
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #acacac;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+input[type="checkbox"]:hover {
+  color: #979797;
+  border: 2px solid #979797;
+  background-color: #e7e7e7;
+}
+
+input[type="checkbox"]:checked:hover {
+  background-color: #e7e7e7;
+  border: 1px solid #979797;
+}
+
+input[type="checkbox"]::before:hover {
+  color: #979797;
+}
+
+/*-----------------------------*/
 .listitem-checked {
   text-decoration: line-through;
   text-decoration-color: #a683e3;
