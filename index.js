@@ -108,7 +108,7 @@ app.get("/button.js", function (req, res) {
   res.sendFile(__dirname + "/public/buttons.js");
 });
 
-//To buy list pages
+//Today List page
 app.get("/today", function (req, res) {
   const day = date.getDate();
   find();
