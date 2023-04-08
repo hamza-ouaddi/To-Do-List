@@ -8,6 +8,8 @@ I used EJS in this project to generate HTML markup without using many HTML pages
 
 https://user-images.githubusercontent.com/80076862/224079643-9d579471-3d58-4284-93b8-e72061ada726.mp4
 
+
+
 ## New Update [04/08/2023]
 
 
